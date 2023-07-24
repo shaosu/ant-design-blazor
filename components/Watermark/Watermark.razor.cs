@@ -32,38 +32,57 @@ namespace AntDesign
 
         [Parameter] public string Content { get; set; }
 
+        [Parameter] public string[] Contents { get; set; }
+
         [Parameter] public int ZIndex { get; set; } = 9;
 
         [Parameter] public (int X, int Y) Gap { get; set; } = (100, 100);
 
+        [Parameter] public string Image { get; set; }
+
+        [Parameter] public (int X, int Y) Offset { get; set; }
+ 
         [Parameter] public RenderFragment ChildContent { get; set; }
 
 
         public string GetSvg()
         {
+            var content = Image != null ?
+                $"""
+                <image xlink:href="{Image}" width="{Width}" height="{Height}" />
+                """
+                :
+                $"""
+                <text x="50%" y="50%" dy="12px" width="{Width}" height="{Height}"
+                   text-anchor="middle"
+                   stroke="#000000"
+                   stroke-width="1"
+                   fill="none"
+                   font-weight="{FontWeight}"
+                   font-style="{FontStyle}"
+                   font-family="{FontFamily}"
+                   font-size="{FontSize}"
+                   style="
+                      transform: rotate({Rotate}deg);
+                      stroke: {FontColor};
+                   ">
+                   {HttpUtility.HtmlEncode(Content)}
+                </text>
+                """;
+
             var svgStr = $"""
-                  <svg xmlns="http://www.w3.org/2000/svg" width="{Width}" height="{Height}">
-                    <text x="50%" y="50%" dy="12px"
-                     text-anchor="middle"
-                     stroke="#000000"
-                     stroke-width="1"
-                     fill="none"
-                     font-weight="{FontWeight}"
-                     font-style="{FontStyle}"
-                     font-family="{FontFamily}"
-                     font-size="{FontSize}"
-                     style="
-                        transform: rotate({Rotate}deg);
-                        stroke: {FontColor};
-                     ">
-                     {HttpUtility.HtmlEncode(Content)}
-                    </text>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    {content}
                   </svg>
                   """;
 
             var base64Url = $"data:image/svg+xml;base64,{Convert.ToBase64String(Encoding.Default.GetBytes(svgStr))}";
 
             var styleStr = $"""
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
                     z-index: {ZIndex};
                     pointer-events:none;
                     background-repeat:repeat;

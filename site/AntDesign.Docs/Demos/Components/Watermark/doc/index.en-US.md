@@ -21,7 +21,7 @@ Add specific text or patterns to the page.
 | --- | --- | --- | --- | --- |
 | width | The width of the watermark, the default value of `content` is its own width | number | 120 |  |
 | height | The height of the watermark, the default value of `content` is its own height | number | 64 |  |
-| rotate | When the watermark is drawn, the rotation Angle, unit `¡ã` | number | -22 |  |
+| rotate | When the watermark is drawn, the rotation Angle, unit `Â°` | number | -22 |  |
 | zIndex | The z-index of the appended watermark element | number | 9 |  |
 | image | Image source, it is recommended to export 2x or 3x image, high priority (support base64 format) | string | - |  |
 | content | Watermark text content | string \| string[] | - |  |

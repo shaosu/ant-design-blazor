@@ -1,52 +1,52 @@
 ---
 category: Components
-subtitle: Ë®Ó¡
-type: ÆäËû
+subtitle: æ°´å°
+type: å…¶ä»–
 title: Watermark
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*wr1ISY50SyYAAAAAAAAAAAAADrJ8AQ/original
 cols: 1
 ---
 
-¸øÒ³ÃæµÄÄ³¸öÇøÓò¼ÓÉÏË®Ó¡¡£
+ç»™é¡µé¢çš„æŸä¸ªåŒºåŸŸåŠ ä¸Šæ°´å°ã€‚
 
-## ºÎÊ±Ê¹ÓÃ
+## ä½•æ—¶ä½¿ç”¨
 
-- Ò³ÃæĞèÒªÌí¼ÓË®Ó¡±êÊ¶°æÈ¨Ê±Ê¹ÓÃ¡£
-- ÊÊÓÃÓÚ·ÀÖ¹ĞÅÏ¢µÁÓÃ¡£
+- é¡µé¢éœ€è¦æ·»åŠ æ°´å°æ ‡è¯†ç‰ˆæƒæ—¶ä½¿ç”¨ã€‚
+- é€‚ç”¨äºé˜²æ­¢ä¿¡æ¯ç›—ç”¨ã€‚
 
 
 ## API
 
 ### Watermark
 
-| ²ÎÊı | ËµÃ÷ | ÀàĞÍ | Ä¬ÈÏÖµ | °æ±¾ |
+| å‚æ•° | è¯´æ˜ | ç±»å‹ | é»˜è®¤å€¼ | ç‰ˆæœ¬ |
 | --- | --- | --- | --- | --- |
-| width | Ë®Ó¡µÄ¿í¶È£¬`content` µÄÄ¬ÈÏÖµÎª×ÔÉíµÄ¿í¶È | number | 120 |  |
-| height | Ë®Ó¡µÄ¸ß¶È£¬`content` µÄÄ¬ÈÏÖµÎª×ÔÉíµÄ¸ß¶È | number | 64 |  |
-| rotate | Ë®Ó¡»æÖÆÊ±£¬Ğı×ªµÄ½Ç¶È£¬µ¥Î» `¡ã` | number | -22 |  |
-| zIndex | ×·¼ÓµÄË®Ó¡ÔªËØµÄ z-index | number | 9 |  |
-| image | Í¼Æ¬Ô´£¬½¨Òéµ¼³ö 2 ±¶»ò 3 ±¶Í¼£¬ÓÅÏÈ¼¶¸ß (Ö§³Ö base64 ¸ñÊ½) | string | - |  |
-| content | Ë®Ó¡ÎÄ×ÖÄÚÈİ | string \| string[] | - |  |
-| font | ÎÄ×ÖÑùÊ½ | [Font](#font) | [Font](#font) |  |
-| gap | Ë®Ó¡Ö®¼äµÄ¼ä¾à | \[number, number\] | \[100, 100\] |  |
-| offset | Ë®Ó¡¾àÀëÈİÆ÷×óÉÏ½ÇµÄÆ«ÒÆÁ¿£¬Ä¬ÈÏÎª `gap/2` | \[number, number\] | \[gap\[0\]/2, gap\[1\]/2\] |  |
+| width | æ°´å°çš„å®½åº¦ï¼Œ`content` çš„é»˜è®¤å€¼ä¸ºè‡ªèº«çš„å®½åº¦ | number | 120 |  |
+| height | æ°´å°çš„é«˜åº¦ï¼Œ`content` çš„é»˜è®¤å€¼ä¸ºè‡ªèº«çš„é«˜åº¦ | number | 64 |  |
+| rotate | æ°´å°ç»˜åˆ¶æ—¶ï¼Œæ—‹è½¬çš„è§’åº¦ï¼Œå•ä½ `Â°` | number | -22 |  |
+| zIndex | è¿½åŠ çš„æ°´å°å…ƒç´ çš„ z-index | number | 9 |  |
+| image | å›¾ç‰‡æºï¼Œå»ºè®®å¯¼å‡º 2 å€æˆ– 3 å€å›¾ï¼Œä¼˜å…ˆçº§é«˜ (æ”¯æŒ base64 æ ¼å¼) | string | - |  |
+| content | æ°´å°æ–‡å­—å†…å®¹ | string \| string[] | - |  |
+| font | æ–‡å­—æ ·å¼ | [Font](#font) | [Font](#font) |  |
+| gap | æ°´å°ä¹‹é—´çš„é—´è· | \[number, number\] | \[100, 100\] |  |
+| offset | æ°´å°è·ç¦»å®¹å™¨å·¦ä¸Šè§’çš„åç§»é‡ï¼Œé»˜è®¤ä¸º `gap/2` | \[number, number\] | \[gap\[0\]/2, gap\[1\]/2\] |  |
 
 ### Font
 
 <!-- prettier-ignore -->
-| ²ÎÊı | ËµÃ÷ | ÀàĞÍ | Ä¬ÈÏÖµ | °æ±¾ |
+| å‚æ•° | è¯´æ˜ | ç±»å‹ | é»˜è®¤å€¼ | ç‰ˆæœ¬ |
 | --- | --- | --- | --- | --- |
-| color | ×ÖÌåÑÕÉ« | string | rgba(0,0,0,.15) |  |
-| fontSize | ×ÖÌå´óĞ¡ | number | 16 |  |
-| fontWeight | ×ÖÌå´ÖÏ¸ | `normal` \| `light` \| `weight` \| number | normal |  |
-| fontFamily | ×ÖÌåÀàĞÍ | string | sans-serif |  |
-| fontStyle | ×ÖÌåÑùÊ½ | `none` \| `normal` \| `italic` \| `oblique` | normal |  |
+| color | å­—ä½“é¢œè‰² | string | rgba(0,0,0,.15) |  |
+| fontSize | å­—ä½“å¤§å° | number | 16 |  |
+| fontWeight | å­—ä½“ç²—ç»† | `normal` \| `light` \| `weight` \| number | normal |  |
+| fontFamily | å­—ä½“ç±»å‹ | string | sans-serif |  |
+| fontStyle | å­—ä½“æ ·å¼ | `none` \| `normal` \| `italic` \| `oblique` | normal |  |
 
 ## FAQ
 
-### ´¦ÀíÒì³£Í¼Æ¬Ë®Ó¡
+### å¤„ç†å¼‚å¸¸å›¾ç‰‡æ°´å°
 
-µ±Ê¹ÓÃÍ¼Æ¬Ë®Ó¡ÇÒÍ¼Æ¬¼ÓÔØÒì³£Ê±£¬¿ÉÒÔÍ¬Ê±Ìí¼Ó `content` ·ÀÖ¹Ë®Ó¡Ê§Ğ§£¨×Ô 5.2.3 ¿ªÊ¼Ö§³Ö£©¡£
+å½“ä½¿ç”¨å›¾ç‰‡æ°´å°ä¸”å›¾ç‰‡åŠ è½½å¼‚å¸¸æ—¶ï¼Œå¯ä»¥åŒæ—¶æ·»åŠ  `content` é˜²æ­¢æ°´å°å¤±æ•ˆï¼ˆè‡ª 5.2.3 å¼€å§‹æ”¯æŒï¼‰ã€‚
 
 ```typescript jsx
 <Watermark
