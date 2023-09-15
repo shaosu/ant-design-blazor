@@ -1,0 +1,9 @@
+﻿<Router AppAssembly="@typeof(AntDesign.Docs.App).Assembly">
+    <Found Context="routeData">
+        @{
+            Console.WriteLine(routeData);
+}
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(AntDesign.Docs.Shared.MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+</Router>
