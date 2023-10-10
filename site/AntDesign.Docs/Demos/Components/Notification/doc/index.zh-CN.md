@@ -6,7 +6,8 @@ title: Notification
 cover: https://gw.alipayobjects.com/zos/alicdn/Jxm5nw61w/Notification.svg
 ---
 
-全局展示通知提醒信息。
+全局展示通知提醒信息。  
+**注意:需要在App.razor组件最后,添加全局容器AntContainer**
 
 ## 何时使用
 
